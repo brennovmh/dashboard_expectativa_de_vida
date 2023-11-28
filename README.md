@@ -1,5 +1,7 @@
 # Dashboard Expectativa de Vida 
 
+Trabalho realizado por Brenno Martins e Jordan Barros como parte dos requisitos para conclusão do curso de Pós Graduação em  Gestão Estratégica e Análise de Dados - PUC/Minas 
+
 **Dashboard de Expectativa de Vida - Análise de Dados da OMS**
 
 Introdução:
