@@ -13,14 +13,21 @@ st.title("Dashboard de Expectativa de Vida - Organização Mundial de Saúde")
 st.sidebar.subheader("Selecione um país")
 selected_country = st.sidebar.selectbox("", data['Country_pt'].unique())
 
-# Mostrar PIB per capita e expectativa de vida para país selecionado
+# Mostrar dados para país selecionado
 selected_data = data[data['Country_pt'] == selected_country]
 
 with st.container():
     if not data.empty:
-        st.sidebar.write(f"## Dados para {selected_country}")
-        st.sidebar.write(f"#### PIB per Capita: {selected_data.iloc[0]['GDP_per_capita']} USD")
-        st.sidebar.write(f"#### Expectativa de Vida: {selected_data.iloc[0]['Life_expectancy']} anos")
+        st.sidebar.write(f"# Dados para {selected_country}")
+        st.sidebar.write(f"### PIB per Capita: {selected_data.iloc[0]['GDP_per_capita']} USD")
+        st.sidebar.write(f"### Expectativa de Vida: {selected_data.iloc[0]['Life_expectancy']} anos")
+        st.sidebar.write(f"### Morte infantil: {selected_data.iloc[0]['Infant_deaths']} morte por 1000 habitantes")
+        st.sidebar.write(f"### Crianças até 1 ano imunizado para Hepatite B: {selected_data.iloc[0]['Hepatitis_B']}%")
+        st.sidebar.write(f"### Casos notificados de Sarampo por 1000 habitantes: {selected_data.iloc[0]['Measles']}")
+        st.sidebar.write(f"### Número de mortes por meningite (viral e bacteriana): {selected_data.iloc[0]['Meningitis']}")
+        st.sidebar.write(f"### Casos novos de Doença de Alzheimer: {selected_data.iloc[0]['Alzheimer']}")
+        st.sidebar.write(f"### Casos novos de Doença de Parkinson: {selected_data.iloc[0]['Parkinson']}")
+        st.sidebar.write(f"### Casos de desnutrição notificados: {selected_data.iloc[0]['Nutritional Deficiencies']}")
     else:
         st.write("Please select a country to display data.")
 
